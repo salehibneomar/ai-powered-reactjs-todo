@@ -1,16 +1,21 @@
 import AboutPage from './pages/AboutPage'
 import App from './App'
+import DefaultLayout from './layouts/DefaultLayout'
 
 const routes = [
 	{
-		path: '/about',
-		name: 'About',
-		Component: AboutPage,
-	},
-	{
 		path: '/',
-		name: 'Home',
-		Component: App,
+		Component: DefaultLayout,
+		children: [
+			{
+				index: true,
+				Component: App,
+			},
+			{
+				path: 'about',
+				Component: AboutPage,
+			},
+		],
 	},
 ]
 
