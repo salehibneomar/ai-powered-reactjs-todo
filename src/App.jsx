@@ -34,6 +34,7 @@ const App = () => {
 			completed: false,
 		},
 	]
+
 	return (
 		<div className="grid grid-cols-12 gap-y-8 gap-x-0 w-full">
 			<div className="col-span-12">
