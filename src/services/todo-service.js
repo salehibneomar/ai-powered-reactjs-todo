@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const todoService = () => {
-	const generateTodo = async user_input => {
+const todoService = {
+	async generateTodo(user_input) {
 		let response = null
 		try {
 			const { data } = await axios.post('/api/generate-todo', {
@@ -12,9 +12,6 @@ const todoService = () => {
 			console.error('API error:', error)
 		}
 		return response
-	}
-	return {
-		generateTodo,
 	}
 }
 

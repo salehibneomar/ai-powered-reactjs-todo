@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useState } from 'react'
 import todoService from '../../services/todo-service'
 
@@ -9,27 +8,13 @@ const CreateTodo = props => {
 
 	const { onTodoCreation } = props
 
-	async function generateTodo(user_input) {
-		let response = null
-		try {
-			const { data } = await axios.post('/api/generate-todo', {
-				user_input,
-			})
-			response = data
-		} catch (error) {
-			console.error('API error:', error)
-		}
-		return response
-	}
-
 	const handleSubmit = async event => {
 		event.preventDefault()
 		setLoading(true)
 		setError('')
 		const payload = userInput.trim() || ''
 		if (payload) {
-			const data = await generateTodo(payload)
-			console.log('Generated Todo:', data)
+			const data = await todoService.generateTodo(payload)
 			if (!data) {
 				setError('Failed to generate todo. Please try again.')
 			} else {
