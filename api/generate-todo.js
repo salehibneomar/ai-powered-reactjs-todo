@@ -1,7 +1,7 @@
 /* global process */
 import { GoogleGenAI } from '@google/genai'
 
-export default async function handler(req, res) {
+const generateTodo = async (req, res) => {
 	try {
 		const { user_input } = req.body
 
@@ -47,3 +47,5 @@ export default async function handler(req, res) {
 		return res.status(500).json({ error: error.message })
 	}
 }
+
+export default generateTodo
