@@ -15,12 +15,12 @@ const generateTodo = async (req, res) => {
 				.json({ error: 'Missing environment variables.' })
 		}
 
-		const ai = new GoogleGenAI({ apiKey })
+		const googleAi = new GoogleGenAI({ apiKey })
 
 		const currentDate = new Date().toISOString().split('T')[0]
 		const fullPrompt = `The current date is ${currentDate}. ${predefinedPrompt}${user_input}`
 
-		const response = await ai.models.generateContent({
+		const response = await googleAi.models.generateContent({
 			model,
 			contents: fullPrompt,
 			config: {
