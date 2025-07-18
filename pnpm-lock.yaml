@@ -32,9 +32,6 @@ importers:
       zustand:
         specifier: 5.0.6
         version: 5.0.6(@types/react@19.1.8)(react@19.1.0)
-      zustand-indexeddb-storage:
-        specifier: ^1.0.0
-        version: 1.0.0
     devDependencies:
       '@eslint/js':
         specifier: 9.30.1
@@ -64,8 +61,8 @@ importers:
         specifier: ^16.3.0
         version: 16.3.0
       vercel:
-        specifier: 44.4.3
-        version: 44.4.3(rollup@4.44.2)
+        specifier: 44.5.0
+        version: 44.5.0(rollup@4.44.2)
       vite:
         specifier: 7.0.4
         version: 7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1)
@@ -741,8 +738,8 @@ packages:
   '@vercel/hydrogen@1.2.3':
     resolution: {integrity: sha512-sU0HWHabNxlTdKQWPMDqwr+3MqnhXc4Tvnl4i9cbdEYn5061SEKhdfpl2RhuvPByQJ8sZL8soVXFHIjFBJAR4w==}
 
-  '@vercel/next@4.10.1':
-    resolution: {integrity: sha512-TsWGeXSaCW3jhT3eqa7mWdoS4OqBumlRc7rypeRkuSoySZRwR1oeO+1rOUICYSEyU8hJwgd9uoSKa5Pn3W8BCA==}
+  '@vercel/next@4.10.2':
+    resolution: {integrity: sha512-KIoC5HzjTvRhM8j8g0EmvD0dHQ607KU+MqAvNCL/JsfqpOM+Tv0PFnOIXJjmbkEXwWkTvnu8WSsJTfpEUyM55g==}
 
   '@vercel/nft@0.29.2':
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
@@ -2119,8 +2116,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@44.4.3:
-    resolution: {integrity: sha512-qKwc8Dvj1i9jIdSzY+FzRWXVNL9l6iIJIC+0ao+SGknQOxwQCWfH2y4/TJnICQ97GPR4KY10p8IKVk5QYsfktg==}
+  vercel@44.5.0:
+    resolution: {integrity: sha512-bA0xj2jEY75eScjf6SZrKTeIDScAhhSLNkSYIu0RPH2gBYfvI0aXhLLy04Tn6RiyyCX/DnLSNvaaC7kLrr64FA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -2241,9 +2238,6 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-
-  zustand-indexeddb-storage@1.0.0:
-    resolution: {integrity: sha512-NbUXd0QLh0dJoW9n59t4sQHrsUZj2AsyhVxPx5FwH89p6+d2N/8V5US9enOn6v/VVAT9Hk9WcK4rxkfXGubuyw==}
 
   zustand@5.0.6:
     resolution: {integrity: sha512-ihAqNeUVhe0MAD+X8M5UzqyZ9k3FFZLBTtqo6JLPwV53cbRB/mJwBI0PxcIgqhBBHlEs8G45OTDTMq3gNcLq3A==}
@@ -2863,7 +2857,7 @@ snapshots:
       '@vercel/static-config': 3.1.1
       ts-morph: 12.0.0
 
-  '@vercel/next@4.10.1(rollup@4.44.2)':
+  '@vercel/next@4.10.2(rollup@4.44.2)':
     dependencies:
       '@vercel/nft': 0.29.2(rollup@4.44.2)
     transitivePeerDependencies:
@@ -4189,14 +4183,14 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@44.4.3(rollup@4.44.2):
+  vercel@44.5.0(rollup@4.44.2):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 10.6.7
       '@vercel/fun': 1.1.6
       '@vercel/go': 3.2.2
       '@vercel/hydrogen': 1.2.3
-      '@vercel/next': 4.10.1(rollup@4.44.2)
+      '@vercel/next': 4.10.2(rollup@4.44.2)
       '@vercel/node': 5.3.6(rollup@4.44.2)
       '@vercel/python': 4.7.4
       '@vercel/redwood': 2.3.4(rollup@4.44.2)
@@ -4288,8 +4282,6 @@ snapshots:
   yn@3.1.1: {}
 
   yocto-queue@0.1.0: {}
-
-  zustand-indexeddb-storage@1.0.0: {}
 
   zustand@5.0.6(@types/react@19.1.8)(react@19.1.0):
     optionalDependencies:
