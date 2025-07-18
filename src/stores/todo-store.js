@@ -1,5 +1,6 @@
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { persist, createJSONStorage } from 'zustand/middleware'
+import indexedDbSetup from './indexed-db-setup'
 
 export const useTodoStore = create(
 	persist(
@@ -13,6 +14,8 @@ export const useTodoStore = create(
 		}),
 		{
 			name: 'todo-storage',
+			storage: createJSONStorage(() => indexedDbSetup),
+			partialize: state => ({ todos: state.todos }),
 		}
 	)
 )

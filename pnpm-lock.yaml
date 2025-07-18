@@ -13,10 +13,13 @@ importers:
         version: 1.9.0
       '@tailwindcss/vite':
         specifier: 4.1.11
-        version: 4.1.11(vite@7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1))
+        version: 4.1.11(vite@7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1))
       axios:
         specifier: 1.10.0
         version: 1.10.0
+      idb-keyval:
+        specifier: ^6.2.2
+        version: 6.2.2
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -30,12 +33,15 @@ importers:
         specifier: 4.1.11
         version: 4.1.11
       zustand:
-        specifier: ^5.0.6
+        specifier: 5.0.6
         version: 5.0.6(@types/react@19.1.8)(react@19.1.0)
     devDependencies:
       '@eslint/js':
         specifier: 9.30.1
         version: 9.30.1
+      '@types/node':
+        specifier: ^24.0.14
+        version: 24.0.14
       '@types/react':
         specifier: 19.1.8
         version: 19.1.8
@@ -44,7 +50,7 @@ importers:
         version: 19.1.6(@types/react@19.1.8)
       '@vitejs/plugin-react':
         specifier: 4.6.0
-        version: 4.6.0(vite@7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1))
+        version: 4.6.0(vite@7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1))
       eslint:
         specifier: 9.30.1
         version: 9.30.1(jiti@2.4.2)
@@ -58,11 +64,11 @@ importers:
         specifier: ^16.3.0
         version: 16.3.0
       vercel:
-        specifier: 44.4.3
-        version: 44.4.3(rollup@4.44.2)
+        specifier: 44.5.0
+        version: 44.5.0(rollup@4.44.2)
       vite:
         specifier: 7.0.4
-        version: 7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1)
+        version: 7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1)
 
 packages:
 
@@ -698,6 +704,9 @@ packages:
   '@types/node@16.18.11':
     resolution: {integrity: sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA==}
 
+  '@types/node@24.0.14':
+    resolution: {integrity: sha512-4zXMWD91vBLGRtHK3YbIoFMia+1nqEz72coM42C5ETjnNCa/heoj7NT1G67iAfOqMmcfhuCZ4uNpyz8EjlAejw==}
+
   '@types/react-dom@19.1.6':
     resolution: {integrity: sha512-4hOiT/dwO8Ko0gV1m/TJZYk3y0KBnY9vzDh7W+DH17b2HFSOGgdj33dhihPeuy3l0q23+4e+hoXHV6hCC4dCXw==}
     peerDependencies:
@@ -732,8 +741,8 @@ packages:
   '@vercel/hydrogen@1.2.3':
     resolution: {integrity: sha512-sU0HWHabNxlTdKQWPMDqwr+3MqnhXc4Tvnl4i9cbdEYn5061SEKhdfpl2RhuvPByQJ8sZL8soVXFHIjFBJAR4w==}
 
-  '@vercel/next@4.10.1':
-    resolution: {integrity: sha512-TsWGeXSaCW3jhT3eqa7mWdoS4OqBumlRc7rypeRkuSoySZRwR1oeO+1rOUICYSEyU8hJwgd9uoSKa5Pn3W8BCA==}
+  '@vercel/next@4.10.2':
+    resolution: {integrity: sha512-KIoC5HzjTvRhM8j8g0EmvD0dHQ607KU+MqAvNCL/JsfqpOM+Tv0PFnOIXJjmbkEXwWkTvnu8WSsJTfpEUyM55g==}
 
   '@vercel/nft@0.29.2':
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
@@ -1432,6 +1441,9 @@ packages:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
 
+  idb-keyval@6.2.2:
+    resolution: {integrity: sha512-yjD9nARJ/jb1g+CvD0tlhUHOrJ9Sy0P8T9MF3YaLlHnSRpwPfpTX0XIvpmw3gAJUmEu3FiICLBDPXVwyEvrleg==}
+
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
@@ -2075,6 +2087,9 @@ packages:
   uid-promise@1.0.0:
     resolution: {integrity: sha512-R8375j0qwXyIu/7R0tjdF06/sElHqbmdmWC9M2qQHpEVbvE4I5+38KJI7LUUmQMp7NVq4tKHiBMkT0NFM453Ig==}
 
+  undici-types@7.8.0:
+    resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
+
   undici@5.28.4:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
     engines: {node: '>=14.0'}
@@ -2107,8 +2122,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@44.4.3:
-    resolution: {integrity: sha512-qKwc8Dvj1i9jIdSzY+FzRWXVNL9l6iIJIC+0ao+SGknQOxwQCWfH2y4/TJnICQ97GPR4KY10p8IKVk5QYsfktg==}
+  vercel@44.5.0:
+    resolution: {integrity: sha512-bA0xj2jEY75eScjf6SZrKTeIDScAhhSLNkSYIu0RPH2gBYfvI0aXhLLy04Tn6RiyyCX/DnLSNvaaC7kLrr64FA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -2730,12 +2745,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.11
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.11
 
-  '@tailwindcss/vite@4.1.11(vite@7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1))':
+  '@tailwindcss/vite@4.1.11(vite@7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1))':
     dependencies:
       '@tailwindcss/node': 4.1.11
       '@tailwindcss/oxide': 4.1.11
       tailwindcss: 4.1.11
-      vite: 7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1)
+      vite: 7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1)
 
   '@tootallnate/once@2.0.0': {}
 
@@ -2780,6 +2795,10 @@ snapshots:
   '@types/json-schema@7.0.15': {}
 
   '@types/node@16.18.11': {}
+
+  '@types/node@24.0.14':
+    dependencies:
+      undici-types: 7.8.0
 
   '@types/react-dom@19.1.6(@types/react@19.1.8)':
     dependencies:
@@ -2844,7 +2863,7 @@ snapshots:
       '@vercel/static-config': 3.1.1
       ts-morph: 12.0.0
 
-  '@vercel/next@4.10.1(rollup@4.44.2)':
+  '@vercel/next@4.10.2(rollup@4.44.2)':
     dependencies:
       '@vercel/nft': 0.29.2(rollup@4.44.2)
     transitivePeerDependencies:
@@ -2942,7 +2961,7 @@ snapshots:
       json-schema-to-ts: 1.6.4
       ts-morph: 12.0.0
 
-  '@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1))':
+  '@vitejs/plugin-react@4.6.0(vite@7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1))':
     dependencies:
       '@babel/core': 7.28.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.0)
@@ -2950,7 +2969,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.19
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1)
+      vite: 7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -3598,6 +3617,8 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
+  idb-keyval@6.2.2: {}
+
   ignore@5.3.2: {}
 
   import-fresh@3.3.1:
@@ -4142,6 +4163,8 @@ snapshots:
 
   uid-promise@1.0.0: {}
 
+  undici-types@7.8.0: {}
+
   undici@5.28.4:
     dependencies:
       '@fastify/busboy': 2.1.1
@@ -4168,14 +4191,14 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@44.4.3(rollup@4.44.2):
+  vercel@44.5.0(rollup@4.44.2):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 10.6.7
       '@vercel/fun': 1.1.6
       '@vercel/go': 3.2.2
       '@vercel/hydrogen': 1.2.3
-      '@vercel/next': 4.10.1(rollup@4.44.2)
+      '@vercel/next': 4.10.2(rollup@4.44.2)
       '@vercel/node': 5.3.6(rollup@4.44.2)
       '@vercel/python': 4.7.4
       '@vercel/redwood': 2.3.4(rollup@4.44.2)
@@ -4191,7 +4214,7 @@ snapshots:
       - rollup
       - supports-color
 
-  vite@7.0.4(@types/node@16.18.11)(jiti@2.4.2)(lightningcss@1.30.1):
+  vite@7.0.4(@types/node@24.0.14)(jiti@2.4.2)(lightningcss@1.30.1):
     dependencies:
       esbuild: 0.25.6
       fdir: 6.4.6(picomatch@4.0.2)
@@ -4200,7 +4223,7 @@ snapshots:
       rollup: 4.44.2
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 16.18.11
+      '@types/node': 24.0.14
       fsevents: 2.3.3
       jiti: 2.4.2
       lightningcss: 1.30.1
