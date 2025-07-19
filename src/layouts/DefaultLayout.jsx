@@ -1,4 +1,5 @@
 import { useOutlet, Link } from 'react-router'
+import { ToastContainer } from 'react-toastify'
 
 const DefaultLayout = () => {
 	const outlet = useOutlet()
@@ -35,6 +36,7 @@ const DefaultLayout = () => {
 					&copy; {year} AIP-Todo. All rights reserved.
 				</div>
 			</footer>
+			<ToastContainer />
 		</div>
 	)
 }

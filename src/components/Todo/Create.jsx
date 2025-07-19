@@ -1,45 +1,22 @@
 import { useState } from 'react'
-import todoService from '../../services/todo-service'
 
 const CreateTodo = props => {
 	const [userInput, setUserInput] = useState('')
 	const [loading, setLoading] = useState(false)
-	const [error, setError] = useState('')
 
 	const { onTodoCreation } = props
 
 	const handleSubmit = async event => {
 		event.preventDefault()
 		setLoading(true)
-		setError('')
 		const payload = userInput.trim() || ''
-		if (payload) {
-			const data = await todoService.generateTodo(payload)
-			if (!data) {
-				setError('Failed to generate todo. Please try again.')
-			} else {
-				onTodoCreation?.(data)
-			}
-		}
+		await onTodoCreation?.(payload)
 		setLoading(false)
 		setUserInput('')
 	}
 
 	return (
 		<>
-			{error && (
-				<div className="mb-4 w-full px-4 py-3 rounded bg-red-100 border border-red-400 text-red-700 text-base flex items-center justify-between">
-					<span>{error}</span>
-					<button
-						type="button"
-						className="ml-4 text-red-700 hover:text-red-900 font-bold px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-red-400 cursor-pointer"
-						onClick={() => setError('')}
-						aria-label="Close alert"
-					>
-						&times;
-					</button>
-				</div>
-			)}
 			<form className="w-full" method="POST" onSubmit={handleSubmit}>
 				<div className="relative flex items-center w-full">
 					<input
@@ -51,6 +28,8 @@ const CreateTodo = props => {
 						onChange={e => setUserInput(e.target.value)}
 						disabled={loading}
 						autoComplete="off"
+						required
+						autoFocus
 					/>
 					<button
 						type="submit"

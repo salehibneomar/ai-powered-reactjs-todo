@@ -1,19 +1,27 @@
+import { toastify } from './utils/toastify'
 import TodoBoard from './components/Todo/Board'
 import CreateTodo from './components/Todo/Create'
+import todoService from './services/todo-service'
 import { useTodoStore } from './stores/todo-store'
 
 const App = () => {
 	const todoStore = useTodoStore()
 	const todos = todoStore.todos
 
-	const handleTodoCreation = async todo => {
-		if (todo) {
-			const newTodo = {
-				...todo,
-				completed: false,
-				id: todos.length + 1,
+	const handleTodoCreation = async payload => {
+		if (payload) {
+			const data = await todoService.generateTodo(payload)
+			if (!data) {
+				toastify('Failed to generate todo. Please try again.!', 'error')
+			} else {
+				const newTodo = {
+					...data,
+					completed: false,
+					id: todos.length + 1,
+				}
+				await todoStore.addTodo(newTodo)
+				toastify('Todo generated successfully!', 'success')
 			}
-			await todoStore.addTodo(newTodo)
 		}
 	}
 

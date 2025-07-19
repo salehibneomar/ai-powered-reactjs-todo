@@ -12,7 +12,7 @@ const todoService = {
 			console.error('API error:', error)
 		}
 		return response
-	}
+	},
 }
 
 export default todoService

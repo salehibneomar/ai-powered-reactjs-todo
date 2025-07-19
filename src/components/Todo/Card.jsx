@@ -1,13 +1,4 @@
-// Helper to format date as 'DD MMM, YYYY'
-function formatEstimateDate(dateStr) {
-	if (!dateStr) return ''
-	const date = new Date(dateStr)
-	if (isNaN(date.getTime())) return dateStr
-	const day = date.getDate()
-	const month = date.toLocaleString('en-US', { month: 'short' })
-	const year = date.getFullYear()
-	return `${day} ${month}, ${year}`
-}
+import { defaultDateFormat } from '../../helpers/date-time'
 
 const TodoCard = props => {
 	const { todo } = props
@@ -48,7 +39,7 @@ const TodoCard = props => {
 				<div className="mt-2 flex items-center gap-2">
 					{todo?.estimated_date && (
 						<span className="inline-block px-2 py-1 text-xs rounded-full font-medium bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
-							{formatEstimateDate(todo.estimated_date)}
+							{defaultDateFormat(todo.estimated_date)}
 						</span>
 					)}
 					{todo?.completed !== undefined && (
