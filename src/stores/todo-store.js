@@ -11,6 +11,13 @@ export const useTodoStore = create(
 					todos: [todo, ...state.todos],
 				}))
 			},
+			deleteTodo: async domIndex => {
+				set(state => {
+					const todos = [...state.todos]
+					todos.splice(domIndex, 1)
+					return { todos }
+				})
+			},
 		}),
 		{
 			name: 'todo-storage',
