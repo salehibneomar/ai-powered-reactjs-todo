@@ -18,7 +18,7 @@ importers:
         specifier: 1.10.0
         version: 1.10.0
       idb-keyval:
-        specifier: ^6.2.2
+        specifier: 6.2.2
         version: 6.2.2
       react:
         specifier: 19.1.0
