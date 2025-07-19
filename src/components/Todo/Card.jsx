@@ -1,10 +1,15 @@
 import { defaultDateFormat } from '../../helpers/date-time'
 
 const TodoCard = props => {
-	const { todo } = props
+	const { todo, onDelete } = props
+
+	const handleOnDelete = async event => {
+		event.stopPropagation()
+		onDelete?.(todo)
+	}
+
 	return (
 		<div className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-sm dark:shadow-none p-5 flex flex-col gap-2 transition hover:shadow-lg dark:hover:shadow-slate-900/20 cursor-pointer relative">
-			{/* Extra small action buttons at top right */}
 			<div className="absolute top-2 right-2 flex items-center gap-1 z-10">
 				<button
 					type="button"
@@ -19,11 +24,12 @@ const TodoCard = props => {
 					className="material-icons text-gray-400 hover:text-red-600 bg-transparent p-0 rounded transition text-xs w-6 h-6 flex items-center justify-center cursor-pointer"
 					title="Delete"
 					style={{ fontSize: '16px' }}
+					onClick={handleOnDelete}
 				>
 					delete
 				</button>
 			</div>
-			<div className="flex-1">
+			<div className="flex-1 pt-1">
 				<div className="text-md font-semibold text-gray-900 dark:text-white break-words whitespace-pre-line">
 					{todo?.title}
 				</div>
@@ -34,7 +40,7 @@ const TodoCard = props => {
 					</div>
 				)}
 			</div>
-			{/* Status badge and estimated date at bottom */}
+
 			{(todo?.completed !== undefined || todo?.estimated_date) && (
 				<div className="mt-2 flex items-center gap-2">
 					{todo?.estimated_date && (
