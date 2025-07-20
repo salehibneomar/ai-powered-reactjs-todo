@@ -1,11 +1,16 @@
 import { defaultDateFormat } from '../../helpers/date-time'
 
 const TodoCard = props => {
-	const { todo, onDelete } = props
+	const { todo, onDelete, onView } = props
 
 	const handleOnDelete = async event => {
 		event.stopPropagation()
 		onDelete?.(todo)
+	}
+
+	const handleOnView = async event => {
+		event.stopPropagation()
+		onView?.(todo)
 	}
 
 	return (
@@ -16,6 +21,7 @@ const TodoCard = props => {
 					className="material-icons text-gray-400 hover:text-blue-600 bg-transparent p-0 rounded transition text-xs w-6 h-6 flex items-center justify-center cursor-pointer"
 					title="View"
 					style={{ fontSize: '16px' }}
+					onClick={handleOnView}
 				>
 					visibility
 				</button>

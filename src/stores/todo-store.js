@@ -11,10 +11,17 @@ export const useTodoStore = create(
 					todos: [todo, ...state.todos],
 				}))
 			},
-			deleteTodo: async domIndex => {
+			updateTodo: async (id, updatedTodo) => {
 				set(state => {
-					const todos = [...state.todos]
-					todos.splice(domIndex, 1)
+					const todos = state.todos?.map(todo =>
+						+todo.id === +id ? { ...todo, ...updatedTodo } : todo
+					)
+					return { todos }
+				})
+			},
+			deleteTodo: async id => {
+				set(state => {
+					const todos = state.todos?.filter(todo => +todo.id !== +id)
 					return { todos }
 				})
 			},

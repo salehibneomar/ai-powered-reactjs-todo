@@ -1,6 +1,6 @@
-import AboutPage from './pages/AboutPage'
-import App from './App'
 import DefaultLayout from './layouts/DefaultLayout'
+import IndexPage from './pages/IndexPage'
+import AboutPage from './pages/AboutPage'
 
 const routes = [
 	{
@@ -9,7 +9,7 @@ const routes = [
 		children: [
 			{
 				index: true,
-				Component: App,
+				Component: IndexPage,
 			},
 			{
 				path: 'info',
