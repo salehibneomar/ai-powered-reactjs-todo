@@ -21,6 +21,7 @@
 		"sweetalert2": "^11.22.2",
 		"sweetalert2-react-content": "^5.1.0",
 		"tailwindcss": "4.1.11",
+		"uuid": "^11.1.0",
 		"zustand": "5.0.6"
 	},
 	"devDependencies": {

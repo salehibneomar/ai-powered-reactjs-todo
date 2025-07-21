@@ -1,7 +1,7 @@
 import TodoCard from './Card'
 
 const TodoBoard = props => {
-	const { todos, onDelete, onView } = props
+	const { todos, onDelete, onView, onToggleStatus } = props
 	const handleOnDelete = async todo => {
 		onDelete?.(todo)
 	}
@@ -9,6 +9,11 @@ const TodoBoard = props => {
 	const handleOnView = async todo => {
 		onView?.(todo)
 	}
+
+	const handleToggleStatus = async todo => {
+		onToggleStatus?.(todo)
+	}
+
 	return (
 		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 			{todos.map((todo, index) => (
@@ -17,6 +22,7 @@ const TodoBoard = props => {
 					todo={todo}
 					onDelete={handleOnDelete}
 					onView={handleOnView}
+					onToggleStatus={handleToggleStatus}
 				/>
 			))}
 		</div>

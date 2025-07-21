@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid'
 import { toastify } from '../utils/toastify'
 import { sweetalertModal } from '../utils/sweetalert-modal'
 import { defaultDateFormat } from '../helpers/date-time'
@@ -21,7 +22,7 @@ const IndexPage = () => {
 				const newTodo = {
 					...data,
 					completed: false,
-					id: todos.length + 1,
+					id: uuidv4(),
 				}
 				await todoStore.addTodo(newTodo)
 				toastify('Todo generated successfully!')
@@ -143,6 +144,7 @@ const IndexPage = () => {
 	}
 
 	const handleTodoDeletion = async todo => {
+		console.log(todo)
 		await sweetalertModal({
 			title: 'Are you sure?',
 			text: 'You are about to delete this todo.',
@@ -160,6 +162,11 @@ const IndexPage = () => {
 		})
 	}
 
+	const handleToggleStatus = async todo => {
+		await todoStore.updateTodo(todo.id, { completed: !todo.completed })
+		toastify('Todo status updated successfully!')
+	}
+
 	return (
 		<>
 			<div className="grid grid-cols-12 gap-y-8 gap-x-0 w-full">
@@ -171,6 +178,7 @@ const IndexPage = () => {
 						todos={todos}
 						onDelete={handleTodoDeletion}
 						onView={handleTodoView}
+						onToggleStatus={handleToggleStatus}
 					/>
 				</div>
 			</div>
