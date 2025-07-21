@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { defaultDateFormat } from '../../helpers/date-time'
 
 const TodoCard = props => {
@@ -77,4 +78,4 @@ const TodoCard = props => {
 	)
 }
 
-export default TodoCard
+export default memo(TodoCard)

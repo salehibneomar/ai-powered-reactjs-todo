@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import TodoCard from './Card'
 
 const TodoBoard = props => {
@@ -29,4 +30,4 @@ const TodoBoard = props => {
 	)
 }
 
-export default TodoBoard
+export default memo(TodoBoard)
