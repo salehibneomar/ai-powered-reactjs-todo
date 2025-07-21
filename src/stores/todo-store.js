@@ -14,14 +14,14 @@ export const useTodoStore = create(
 			updateTodo: async (id, updatedTodo) => {
 				set(state => {
 					const todos = state.todos?.map(todo =>
-						+todo.id === +id ? { ...todo, ...updatedTodo } : todo
+						todo.id === id ? { ...todo, ...updatedTodo } : todo
 					)
 					return { todos }
 				})
 			},
 			deleteTodo: async id => {
 				set(state => {
-					const todos = state.todos?.filter(todo => +todo.id !== +id)
+					const todos = state.todos?.filter(todo => todo.id !== id)
 					return { todos }
 				})
 			},

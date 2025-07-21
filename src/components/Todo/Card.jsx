@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import { defaultDateFormat } from '../../helpers/date-time'
 
 const TodoCard = props => {
-	const { todo, onDelete, onView } = props
+	const { todo, onDelete, onView, onToggleStatus } = props
 
 	const handleOnDelete = async event => {
 		event.stopPropagation()
@@ -11,6 +12,11 @@ const TodoCard = props => {
 	const handleOnView = async event => {
 		event.stopPropagation()
 		onView?.(todo)
+	}
+
+	const handleToggleStatus = async event => {
+		event.stopPropagation()
+		onToggleStatus?.(todo)
 	}
 
 	return (
@@ -56,6 +62,7 @@ const TodoCard = props => {
 					)}
 					{todo?.completed !== undefined && (
 						<span
+							onClick={handleToggleStatus}
 							className={`inline-block px-2 py-1 text-xs rounded-full font-medium ${
 								todo.completed
 									? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200'
@@ -71,4 +78,4 @@ const TodoCard = props => {
 	)
 }
 
-export default TodoCard
+export default memo(TodoCard)
