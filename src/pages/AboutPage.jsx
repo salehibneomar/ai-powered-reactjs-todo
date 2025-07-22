@@ -9,6 +9,18 @@ const AboutPage = () => {
 					AI-powered productivity, modern UI, and seamless experience.
 				</p>
 				<div className="mb-8">
+					<div className="rounded-lg bg-yellow-50 dark:bg-yellow-900/30 border border-yellow-300 dark:border-yellow-700 px-4 py-3 text-yellow-800 dark:text-yellow-100 text-sm font-medium mb-2">
+						<strong>Note:</strong> This app is{' '}
+						<span className="font-semibold">device-specific</span>.
+						Your data is stored in your browser (IndexedDB), so
+						todos will{' '}
+						<span className="font-semibold">
+							not sync or transfer across devices or browsers
+						</span>
+						.
+					</div>
+				</div>
+				<div className="mb-8">
 					<h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
 						Developer
 					</h2>
