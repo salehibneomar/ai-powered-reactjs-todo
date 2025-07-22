@@ -13,14 +13,46 @@ const AboutPage = () => {
 						<strong>Note:</strong> This app is&nbsp;
 						<span className="font-semibold">
 							device- and browser-specific
-						</span>{' '}
-						and has{' '}
-						<span className="font-semibold">no backend</span>. Your
-						data is stored in your browser, so todos will&nbsp;
+						</span>
+						&nbsp; and has&nbsp;
+						<span className="font-semibold">no backend</span>.<br />
+						Your data is stored in your browser, so todos will&nbsp;
 						<span className="font-semibold">
 							not sync or transfer across devices or browsers
 						</span>
-						.
+						.<br />
+						<span className="block mt-2">
+							<strong>Hosting:</strong> The app is currently
+							hosted on the&nbsp;
+							<span className="font-semibold">
+								Vercel free tier
+							</span>
+							, which allows up to&nbsp;
+							<span className="font-semibold">
+								1 million requests per month
+							</span>
+							. After this limit is reached, the app will not work
+							until the next month.
+						</span>
+						<span className="block mt-2">
+							<strong>LLM Model Limits:</strong> The Google Gemini
+							LLM model is also on a free tier and has the
+							following limits:
+							<ul className="list-disc pl-6 mt-1">
+								<li>
+									<strong>Requests per minute (RPM):</strong>
+									&nbsp; 15
+								</li>
+								<li>
+									<strong>Tokens per minute (TPM):</strong>
+									&nbsp; 250,000
+								</li>
+								<li>
+									<strong>Requests per day (RPD):</strong>
+									&nbsp; 1,000
+								</li>
+							</ul>
+						</span>
 					</div>
 				</div>
 				<div className="mb-8">
@@ -56,11 +88,11 @@ const AboutPage = () => {
 					<p className="text-gray-700 dark:text-gray-300 mb-2">
 						<span className="font-semibold text-blue-600 dark:text-blue-400">
 							AIP-Todo
-						</span>{' '}
-						is a modern, AI-powered todo application that helps you
-						generate, organize, and manage your tasks efficiently.
-						The app features a beautiful, responsive UI and a
-						seamless user experience.
+						</span>
+						&nbsp; is a modern, AI-powered todo application that
+						helps you generate, organize, and manage your tasks
+						efficiently. The app features a beautiful, responsive UI
+						and a seamless user experience.
 					</p>
 					<ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-2">
 						<li>
@@ -85,7 +117,7 @@ const AboutPage = () => {
 							memoization, and logic optimization.
 						</li>
 						<li>
-							Uses React Router v7's{' '}
+							Uses React Router v7's&nbsp;
 							<code>createBrowserRouter</code> for layout and page
 							routing, and the <code>useOutlet</code> hook to
 							display child components as pages from the Default
