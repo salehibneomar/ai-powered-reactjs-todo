@@ -10,10 +10,13 @@ const AboutPage = () => {
 				</p>
 				<div className="mb-8">
 					<div className="rounded-lg bg-yellow-50 dark:bg-yellow-900/30 border border-yellow-300 dark:border-yellow-700 px-4 py-3 text-yellow-800 dark:text-yellow-100 text-sm font-medium mb-2">
-						<strong>Note:</strong> This app is{' '}
-						<span className="font-semibold">device-specific</span>.
-						Your data is stored in your browser (IndexedDB), so
-						todos will{' '}
+						<strong>Note:</strong> This app is&nbsp;
+						<span className="font-semibold">
+							device- and browser-specific
+						</span>{' '}
+						and has{' '}
+						<span className="font-semibold">no backend</span>. Your
+						data is stored in your browser, so todos will&nbsp;
 						<span className="font-semibold">
 							not sync or transfer across devices or browsers
 						</span>
