@@ -1,4 +1,4 @@
-import { useOutlet, Link } from 'react-router'
+import { useOutlet, Link, NavLink } from 'react-router'
 import { ToastContainer } from 'react-toastify'
 
 const DefaultLayout = () => {
@@ -17,12 +17,17 @@ const DefaultLayout = () => {
 						</Link>
 					</div>
 					<div className="flex items-center space-x-4">
-						<Link
+						<NavLink
 							to="/info"
-							className="text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+							className={({ isActive }) =>
+								`text-base font-medium transition-colors ` +
+								(isActive
+									? 'text-blue-600 dark:text-blue-400'
+									: 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400')
+							}
 						>
 							Info
-						</Link>
+						</NavLink>
 					</div>
 				</div>
 			</nav>
