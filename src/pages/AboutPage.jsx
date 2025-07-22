@@ -75,7 +75,9 @@ const AboutPage = () => {
 						<li>
 							Uses React Router v7's{' '}
 							<code>createBrowserRouter</code> for layout and page
-							routing.
+							routing, and the <code>useOutlet</code> hook to
+							display child components as pages from the Default
+							Layout.
 						</li>
 						<li>
 							IndexedDB for local storage; no backend required.
