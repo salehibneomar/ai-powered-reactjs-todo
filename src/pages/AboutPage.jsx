@@ -64,11 +64,8 @@ const AboutPage = () => {
 					</p>
 					<ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-2">
 						<li>
-							AI-powered todo generation using Google Gemini LLM (
-							<span className="font-semibold">
-								gemini-2.5.flash-lite
-							</span>
-							) with a custom prompt for title, description, and
+							AI-powered todo generation using Google Gemini LLM
+							with a custom prompt for title, description, and
 							estimated date.
 						</li>
 						<li>
