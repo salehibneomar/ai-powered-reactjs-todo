@@ -83,6 +83,3 @@ ai-powered-reactjs-todo/
     ```
 
 ---
-
-**Developer:** [Saleh Ibne Omar](https://github.com/salehibneomar)  
-[LinkedIn](https://www.linkedin.com/in/salehibneomar/)
