@@ -2,6 +2,14 @@
 
 AI-powered productivity, modern UI, and seamless experience.
 
+## Demo Video
+
+<p align="center">
+  <a href="https://youtube.com/shorts/QRZWhage2nc?feature=share" target="_blank">
+    <img src="https://img.youtube.com/vi/QRZWhage2nc/hqdefault.jpg" alt="AIP-Todo Demo" style="max-width: 100%; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  </a>
+</p>
+
 ## About
 
 AIP-Todo is a modern, AI-powered todo application that helps you generate, organize, and manage your tasks efficiently. The app features a beautiful, responsive UI and a seamless user experience.
@@ -53,8 +61,6 @@ ai-powered-reactjs-todo/
 ├── README.md
 └── pnpm-lock.yaml
 ```
-
-## Installation (Local Machine)
 
 1. **Clone the repository:**
 
