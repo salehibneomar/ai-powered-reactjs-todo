@@ -54,6 +54,10 @@ ai-powered-reactjs-todo/
 └── pnpm-lock.yaml
 ```
 
+## Demo Video
+
+[Watch a short demo on YouTube](https://youtube.com/shorts/QRZWhage2nc?feature=share)
+
 ## Installation (Local Machine)
 
 1. **Clone the repository:**
