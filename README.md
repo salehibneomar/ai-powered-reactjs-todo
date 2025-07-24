@@ -10,10 +10,6 @@ AI-powered productivity, modern UI, and seamless experience.
   </a>
 </p>
 
-<p align="center">
-  <iframe width="360" height="640" src="https://www.youtube.com/embed/QRZWhage2nc" title="AIP-Todo Demo" frameborder="0" allowfullscreen style="border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"></iframe>
-</p>
-
 ## About
 
 AIP-Todo is a modern, AI-powered todo application that helps you generate, organize, and manage your tasks efficiently. The app features a beautiful, responsive UI and a seamless user experience.
